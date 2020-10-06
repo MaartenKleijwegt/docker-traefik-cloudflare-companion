@@ -85,7 +85,7 @@ Along with the Environment Variables from the [Base image](https://hub.docker.co
 | `DOCKER_HOST`       | (optional) If using tcp connection e.g. `tcp://111.222.111.32:2376`                     |                              |
 | `DOCKER_CERT_PATH`  | (optional) If using tcp connection with TLS - Certificate location e.g. `/docker-certs` |                              |
 | `DOCKER_TLS_VERIFY` | (optional) If using tcp conneciton to socket Verify TLS                                 | `1`                          |
-| `REFRESH_ENTRIES`   | If record exists, update entry with new values `TRUE` or `FALSE`                        | `TRUE`                       |
+| `REFRESH_ENTRIES`   | If record exists, update entry with new values `TRUE` or `FALSE`                        | `FALSE`                      |
 | `SWARM_MODE`        | Enable Docker Swarm Mode `TRUE` or `FALSE`                                              | `FALSE`                      |
 | `CF_EMAIL`          | Email address tied to Cloudflare Account - Leave Blank  for Scoped API                  |                              |
 | `CF_TOKEN`          | API Token for the Domain                                                                |                              |
@@ -95,10 +95,12 @@ Along with the Environment Variables from the [Base image](https://hub.docker.co
 | `DOMAIN1_ZONE_ID`   | Domain 1 Zone ID from Cloudflare                                                        |                              |
 | `DOMAIN1_PROXIED`   | Domain 1 True or False if proxied                                                       |                              |
 | `DOMAIN1_TARGET_DOMAIN` | (optional specify target_domain for Domain 1, overriding the default value from TARGET_DOMAIN)                                          |                              |
+| `DOMAIN1_REFRESH_ENTRIES` | (optional override the default REFRESH_ENTRIES value for domain2)                                        |                              |
 | `DOMAIN2`           | (optional Domain 2 you wish to update records for.)                                     |                              |
 | `DOMAIN2_ZONE_ID`   | Domain 2 Zone ID from Cloudflare                                                        |                              |
 | `DOMAIN2_PROXIED`   | Domain 1 True or False if proxied                                                       |                              |
 | `DOMAIN2_TARGET_DOMAIN`   | (optional specify target_domain for Domain 2, overriding the default value from TARGET_DOMAIN)                                     |                              |
+| `DOMAIN2_REFRESH_ENTRIES` | (optional override the default REFRESH_ENTRIES value for domain2)                                        |                              |
 | `DOMAIN3....`       | And so on..                                                                             |                              |
 
 ### Docker Secrets
